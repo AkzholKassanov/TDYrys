@@ -1,0 +1,48 @@
+{% load static %}
+<! DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Yrys</title>
+</head>
+<body>
+  <div class="up">
+    <h1>Орматек & Шатура</h1>
+    <h4>Рейтинг менеджеров</h4>
+  </div>
+  <div class="container">
+    {% for player in players %}
+      {% if user.is_authenticated %}
+
+      {% endif %}
+      <div class="wrap">
+        <div class="numb">
+          {{player.id}}
+        </div>
+        <div class="row">
+          <div class="name">
+            {{player.username}}
+
+          </div>
+          <div class="color">
+            {{player.color}}
+          </div>
+          <div class="line">
+            <div class="bar">
+              <div class="progress-bar"><span></span></div>
+            </div>
+          </div>
+          <div class="score">
+            {% if user.is_authenticated %}
+              {{player.score}}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+
+  </div>
+</body>
+</html>
