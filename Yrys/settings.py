@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-med9ie$ky+ph%pq0$n)k^q+*(h)100(olld%ivk-2t-8lb%$re
 DEBUG = True
 
 ALLOWED_HOSTS = ['tdyrys-production.up.railway.app']
-CSRF_TRUSTED_ORIGINS=['https://tdyrys-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS=['https://tdyrys-production.up.railway.app/','https://*.tdyrys-production.up.railway.app/','tdyrys-production.up.railway.app/']
 
 # Application definition
 
